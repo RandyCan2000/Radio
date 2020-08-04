@@ -15,6 +15,17 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './Componentes/login/login.component';
 import { ProfilesComponent } from './Componentes/profiles/profiles.component';
 
+export const firebaseConfig={
+  apiKey: "AIzaSyDa9IqHMtI8-GLoTCsqoPSy-kc65Gcy33A",
+  authDomain: "databaseradio-95e7e.firebaseapp.com",
+  databaseURL: "https://databaseradio-95e7e.firebaseio.com",
+  projectId: "databaseradio-95e7e",
+  storageBucket: "databaseradio-95e7e.appspot.com",
+  messagingSenderId: "809920749517",
+  appId: "1:809920749517:web:f1e53c0f2d3df63a58ae84",
+  measurementId: "G-4BGK8C6QK1"
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +37,7 @@ import { ProfilesComponent } from './Componentes/profiles/profiles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig), // Main Angular fire module 
+    AngularFireModule.initializeApp(firebaseConfig), // Main Angular fire module 
     AngularFireDatabaseModule  // Firebase database module 
   ],
   providers: [ServiciosService,AngularFirestore],
