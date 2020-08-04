@@ -1,0 +1,40 @@
+.fb-profile img.fb-image-lg{
+    z-index: 0;
+    width: 100%;  
+    margin-bottom: 10px;
+    max-height: 400px;
+}
+
+.fb-image-profile
+{
+    border-radius: 50%;
+    margin: -90px 10px 0px 50px;
+    z-index: 9;
+    width: 20%;
+}
+
+@media (max-width:768px)
+{
+    
+.fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+}
+
+.fb-image-profile
+{
+    border-radius: 50%;
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; 
+}
+}
+
+.post{
+    margin-top: 3.5%;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    background-color: rgba(191,127,63,0.78);
+    border-radius: 8px;
+}
