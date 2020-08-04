@@ -6,15 +6,14 @@ import { ProfilesComponent } from './Componentes/profiles/profiles.component';
 const routes: Routes = [
   {
     path:'',
-    component:LoginComponent, 
-    pathMatch:'full'
+    component:LoginComponent,
   },
   {
-    path:'profiles',
+    path:'Radio/profiles',
     component:ProfilesComponent
   },
   {
-    path:'profiles/:id',
+    path:'Radio/profiles/:id',
     component:ProfileComponent
   }
 ];
