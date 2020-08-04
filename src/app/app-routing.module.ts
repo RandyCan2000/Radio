@@ -6,15 +6,20 @@ import { ProfilesComponent } from './Componentes/profiles/profiles.component';
 const routes: Routes = [
   {
     path:'',
-    component:LoginComponent,
-  },
-  {
-    path:'Radio/profiles',
-    component:ProfilesComponent
-  },
-  {
-    path:'Radio/profiles/:id',
-    component:ProfileComponent
+    children:[
+      {
+        path:'',
+        component:LoginComponent
+      },
+      {
+        path:'profiles',
+        component:ProfilesComponent
+      },
+      {
+        path:'profiles/:id',
+        component:ProfileComponent
+      }
+    ]
   }
 ];
 
