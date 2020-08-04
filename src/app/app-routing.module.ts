@@ -6,17 +6,22 @@ import { ProfilesComponent } from './Componentes/profiles/profiles.component';
 const routes: Routes = [
   {
     path:'',
+    pathMatch:'full',
+    redirectTo:'login'
+  },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'profiles',
     children:[
       {
         path:'',
-        component:LoginComponent
-      },
-      {
-        path:'profiles',
         component:ProfilesComponent
       },
       {
-        path:'profiles/:id',
+        path:':id',
         component:ProfileComponent
       }
     ]
@@ -24,7 +29,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      useHash:true
+      /*TODO enableTracing : true
+        paramsInheritanceStrategy:'always'
+      */
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

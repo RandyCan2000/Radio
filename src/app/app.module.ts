@@ -11,7 +11,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 //firebase require
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from '../environments/environment';
 import { LoginComponent } from './Componentes/login/login.component';
 import { ProfilesComponent } from './Componentes/profiles/profiles.component';
 

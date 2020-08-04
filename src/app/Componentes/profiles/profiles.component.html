@@ -4,12 +4,14 @@
 
     <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
 
-      <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" *ngFor="let item of Usuarios" style="margin-left: 2%;margin-top: 2%;" routerLink="Radio/profiles/{{item.id}}" routerLink="/profiles/{{item.id}}">
+      <div class="card col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" *ngFor="let item of Usuarios" style="margin-left: 2%;margin-top: 2%;">
+        <a routerLink="/profiles/{{item.id}}">
           <img src="{{item.picture}}"class="card-img-top" alt="Card image" />
           <div class="card-block">
             <h4 class="card-title">{{item.user}}</h4>
             <p class="card-text">{{item.description}}</p>
           </div>
+        </a>
       </div>
     </div>
   </div>
